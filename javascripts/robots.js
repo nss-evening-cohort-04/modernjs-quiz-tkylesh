@@ -4,9 +4,9 @@ var Robo = ((roboTypes) => {
 	var Robot = () => {
 		this.name= null;
 		this.weapon = null;
-		this.attack = null;
+		this.attack = 10;
 		this.type = null;
-		this.speed = null;
+		this.speed = 2;
 		this.health = (min, max) => {
 			//will generate random number between min & max (both inclusive)
 			min = Math.ceil(min);
@@ -22,7 +22,6 @@ var Robo = ((roboTypes) => {
 	roboTypes.Drone = () => {
 		this.type = "aerial";
 		this.allowedWeapons = ["lightMachineGun","flamethrower"];
-		this.attack = 10;
 		this.speed = 7;
 		this.health(60, 90);
 	};
@@ -31,9 +30,8 @@ var Robo = ((roboTypes) => {
 	roboTypes.Bipedal = () => {
 		this.type = "ground";
 		this.allowedWeapons = ["lightMachineGun","Mortar"];
-		this.attack = 10;
 		this.speed = 3;
-		this.health(60, 90);
+		this.health(80, 100);
 
 	};
 	roboTypes.Bipedal.prototype = new Robot();
@@ -41,9 +39,8 @@ var Robo = ((roboTypes) => {
 	roboTypes.ATV = () => {
 		this.type = "amphibious";
 		this.allowedWeapons = ["lightMachineGun","heavyTurret"];
-		this.attack = 10;
 		this.speed = 4;
-		this.health(60, 90);
+		this.health(80, 110);
 
 	};
 	roboTypes.ATV.prototype = new Robot();
