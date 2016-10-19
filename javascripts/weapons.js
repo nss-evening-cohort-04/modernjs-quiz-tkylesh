@@ -26,4 +26,6 @@ var Robo = ((roboWeapons) => {
 		this.addDamage = 9;
 	};
 	roboWeapons.heavyTurret.prototype = new Weapon();
+
+	return roboWeapons;
 })(Robo || {});

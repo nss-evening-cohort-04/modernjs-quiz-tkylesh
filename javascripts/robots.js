@@ -47,4 +47,6 @@ var Robo = ((roboTypes) => {
 
 	};
 	roboTypes.ATV.prototype = new Robot();
-})();
+
+	return roboTypes;
+})(Robo || {});
