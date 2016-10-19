@@ -1,0 +1,20 @@
+{
+  "name": "modernjs-quiz-tkylesh",
+  "description": "modernjs-quiz",
+  "main": "javascripts/app.js",
+  "authors": [
+    "taylor shuff <tkylesh@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/nss-evening-cohort-04/modernjs-quiz-tkylesh",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jQuery": "^3.1.1"
+  }
+}
