@@ -9,6 +9,12 @@ $(document).ready(() => {
   console.log(playerOne.weapon);
   playerOne.toString();
 
+  var playerTwo = new Robo.enemies.Opponent("bosshog");
+  console.log("playerTwo name: ", playerTwo.name);
+  console.log(playerTwo);
+  playerTwo.addAttack(playerTwo.weapon.addDamage);
+  playerTwo.toString();
+
 
  /*
     Show the initial view that accepts player name
