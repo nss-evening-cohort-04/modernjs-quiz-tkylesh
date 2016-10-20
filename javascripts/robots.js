@@ -1,49 +1,68 @@
 "use strict";
-var Robo = ((roboTypes) => {
+var Robo =((roboTypes) => {
 
-	var Robot = () => {
+	roboTypes.types = {};
+
+	roboTypes.types.Robot = function(){
 		this.name= null;
 		this.weapon = null;
 		this.attack = 10;
-		this.type = null;
+		this.species = null;
 		this.speed = 2;
-		this.health = (min, max) => {
+		this.health = function(min, max) {
 			//will generate random number between min & max (both inclusive)
 			min = Math.ceil(min);
 			max = Math.floor(max);
-			return Math.floor(Math.random(max-min))+min;
-		};
-		this.toString = () => {
-			let output =`${this.name} is a ${this.type} robot that has ${this.health} health and ${this.attack} attack, weilding a ${this.weapon}.`;
-
+			return Math.floor(Math.random() * (max - min))+min;
 		};
 	};
 
-	roboTypes.Drone = () => {
-		this.type = "aerial";
+	roboTypes.types.Robot.prototype.addAttack = function(add){
+		this.attack += add;
+	};
+
+
+
+	roboTypes.types.Drone = function() {
+		this.species = "aerial";
 		this.allowedWeapons = ["lightMachineGun","flamethrower"];
 		this.speed = 7;
-		this.health(60, 90);
+		this.health = this.health(60, 90);
+		this.toString = () => {
+			let output =`${this.name} is an ${this.species} robot that has ${this.health} health and ${this.attack} attack, weilding a ${this.weapon}.`;
+			console.log(output);
+			return output;
+		};
 	};
-	roboTypes.Drone.prototype = new Robot();
+	roboTypes.types.Drone.prototype = new roboTypes.types.Robot();
 
-	roboTypes.Bipedal = () => {
-		this.type = "ground";
+	roboTypes.types.Bipedal = function() {
+		this.species = "ground";
 		this.allowedWeapons = ["lightMachineGun","Mortar"];
-		this.speed = 3;
-		this.health(80, 100);
-
-	};
-	roboTypes.Bipedal.prototype = new Robot();
-
-	roboTypes.ATV = () => {
-		this.type = "amphibious";
-		this.allowedWeapons = ["lightMachineGun","heavyTurret"];
 		this.speed = 4;
-		this.health(80, 110);
+		this.health =this.health(80, 100);
+		this.toString = () => {
+			let output =`${this.name} is a ${this.species} robot that has ${this.health} health and ${this.attack} attack, weilding a ${this.weapon}.`;
+			console.log(output);
+			return output;
+		};
 
 	};
-	roboTypes.ATV.prototype = new Robot();
+	roboTypes.types.Bipedal.prototype = new roboTypes.types.Robot();
+
+	roboTypes.types.ATV = function() {
+		this.species = "amphibious";
+		this.allowedWeapons = ["lightMachineGun","heavyTurret"];
+		this.speed = 5;
+		this.health = this.health(80, 110);
+		this.toString = () => {
+			let output =`${this.name} is an ${this.species} robot that has ${this.health} health and ${this.attack} attack, weilding a ${this.weapon}.`;
+			console.log(output);
+			return output;
+		};
+
+	};
+	roboTypes.types.ATV.prototype = new roboTypes.types.Robot();
 
 	return roboTypes;
 })(Robo || {});

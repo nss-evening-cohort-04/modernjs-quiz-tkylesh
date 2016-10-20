@@ -1,0 +1,183 @@
+/****** MAIN STYLE ******/
+body {
+  font-family: "Lora", serif;
+  margin: 0;
+  padding: 0;
+  font-size: 3em;
+  color: #002868;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/***** LANDING STYLE *****/
+.field {
+  margin: 20px 0 0 0;
+}
+
+.field__textinput {
+  font-size: 1em;
+  padding: 15px 0;
+  text-align: center;
+  min-width: 500px;
+}
+
+/**** Section styles****/
+.card {
+  display: none;
+}
+
+.card__prompt {
+  text-align: center;
+}
+
+.card__button {
+  font-size: 1.1em;
+  margin: 30px 0 0 0;
+  text-align: center;
+}
+
+/**** Button styles****/
+
+.btn {
+  text-decoration: none;
+  background-color: gainsboro;
+  color: white;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 10px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 10px 5px;
+  min-width: 260px;
+}
+
+.btn--orange {
+  background-color: #FF4136;
+}
+
+.btn--blue {
+  background-color: #0074D9;
+}
+
+.btn--green {
+  background-color: #008000;
+}
+
+.btn--dkyellow {
+  background-color: #DAA520;
+}
+
+.btn--yellow {
+  background-color: #F3C500;
+}
+
+.btn--big {
+  font-size: 28px;
+  padding: 10px;
+  font-weight: 400;
+}
+
+.btn--small {
+  min-width: 50px;
+}
+
+.btn__prompt {
+  background-color: white;
+  color: #fff;
+  padding-right: 12px;
+  padding-left: 12px;
+  margin-right: -10px;
+  font-weight: 600;
+  background-color: #333;
+  opacity: .4;
+  border-radius: 5px 0 0 5px;
+  left: 37px;
+  float: left;
+}
+
+.btn__text {
+  padding: 0 50px 0 20px;
+  border-radius: 0 5px 5px 0;
+}
+
+
+.btnDebate {
+  border: none;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 15px;
+}
+
+.btnNewGame {
+  border: none;
+  padding: 20px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  border-radius: 15px;
+}
+
+.selected {
+  background-color: gainsboro;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+.winner {
+  background-color: #BF0A30; /* Red */
+  font-size: 2em;
+  color: white;
+}
+
+/****** Aligment/layout ******/
+.col-md-6,
+.col-md-3 {
+  text-align: center;
+}
+
+.bgBackground {
+  position: relative;
+  z-index: -1;
+  width: 100%;
+  margin-bottom:10px;
+}
+
+.bgMain {
+  height: 700px;
+  width: 100%;
+}
+
+.centerThis {
+  text-align: center;
+}
+
+.bottomButtons {
+  padding-top: 20px;
+}
+
+#player-stats,
+#enemy-stats {
+  margin-top: -70px;
+}
+
+.bgStats {
+  padding-top: -20px;
+  margin-top: -10px;
+}
+
+.caption {
+  background:rgba(0,0,0,0.8);
+  height: 50px;
+}
+
+.topMargin {
+  margin-top: -10px;
+}
