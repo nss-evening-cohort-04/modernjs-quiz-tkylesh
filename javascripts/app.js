@@ -3,9 +3,10 @@ $(document).ready(() => {
   /*test out the creation of robot and alien player*/
   var playerOne = new Robo.types.Bipedal();
   playerOne.name="taylor-Bot";
-  playerOne.weapon="lightMachineGun";
-  playerOne.addAttack(3);
+  playerOne.weapon= new Robo.weaponOptions.lightMachineGun();
+  playerOne.addAttack(playerOne.weapon.addDamage);
   console.log(playerOne);
+  console.log(playerOne.weapon);
   playerOne.toString();
 
 

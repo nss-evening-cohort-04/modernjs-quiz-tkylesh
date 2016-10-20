@@ -25,11 +25,10 @@ var Robo =((roboTypes) => {
 
 	roboTypes.types.Drone = function() {
 		this.species = "aerial";
-		this.allowedWeapons = ["lightMachineGun","flamethrower"];
 		this.speed = 7;
 		this.health = this.health(60, 90);
 		this.toString = () => {
-			let output =`${this.name} is an ${this.species} robot that has ${this.health} health and ${this.attack} attack, weilding a ${this.weapon}.`;
+			let output =`${this.name} is an ${this.species} robot that has ${this.health} health and ${this.attack} attack, weilding a ${this.weapon.weaponName}.`;
 			console.log(output);
 			return output;
 		};
@@ -38,11 +37,10 @@ var Robo =((roboTypes) => {
 
 	roboTypes.types.Bipedal = function() {
 		this.species = "ground";
-		this.allowedWeapons = ["lightMachineGun","Mortar"];
 		this.speed = 4;
 		this.health =this.health(80, 100);
 		this.toString = () => {
-			let output =`${this.name} is a ${this.species} robot that has ${this.health} health and ${this.attack} attack, weilding a ${this.weapon}.`;
+			let output =`${this.name} is a ${this.species} robot that has ${this.health} health and ${this.attack} attack, weilding a ${this.weapon.weaponName}.`;
 			console.log(output);
 			return output;
 		};
@@ -52,11 +50,10 @@ var Robo =((roboTypes) => {
 
 	roboTypes.types.ATV = function() {
 		this.species = "amphibious";
-		this.allowedWeapons = ["lightMachineGun","heavyTurret"];
 		this.speed = 5;
 		this.health = this.health(80, 110);
 		this.toString = () => {
-			let output =`${this.name} is an ${this.species} robot that has ${this.health} health and ${this.attack} attack, weilding a ${this.weapon}.`;
+			let output =`${this.name} is an ${this.species} robot that has ${this.health} health and ${this.attack} attack, weilding a ${this.weapon.weaponName}.`;
 			console.log(output);
 			return output;
 		};
