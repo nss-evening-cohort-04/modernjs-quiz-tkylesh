@@ -5,16 +5,16 @@ $(document).ready(() => {
   playerOne.name="taylor-Bot";
   playerOne.weapon= new Robo.weaponOptions.lightMachineGun();
   playerOne.addAttack(playerOne.weapon.addDamage);
-  console.log(playerOne);
-  console.log(playerOne.weapon);
+  console.log("playerOne: ",playerOne);
+  console.log("playerTwo weapon: ",playerOne.weapon);
   playerOne.toString();
 
   var playerTwo = new Robo.enemies.Opponent();
   //creates a random instance of enemey alien player
   playerTwo = playerTwo.generateEnemy();
-  console.log("playerTwo name: ", playerTwo.name);
-  console.log(playerTwo);
   playerTwo.addAttack(playerTwo.weapon.addDamage);
+  console.log("playerTwo: ",playerTwo);
+  console.log("playerTwo weapon: ", playerTwo.weapon);
   playerTwo.toString();
 
 

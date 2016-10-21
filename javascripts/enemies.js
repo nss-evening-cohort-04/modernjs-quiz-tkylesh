@@ -20,13 +20,9 @@ var Robo = ((roboEnemy) => {
 	
 		this.generateEnemy = () => {
 	    // get a random index from the name array
-	    console.log(this.allowedEnemies);
-	  
 	    var random = Math.round(Math.random() * (this.allowedEnemies.length -1));
-	    console.log(random);
 	    //get the string at the index
 	    var randomEnemy = this.allowedEnemies[random];
-	    console.log(randomEnemy);
 	    //compose the corresponding enemy into the player object
 	    return randomEnemy;
 	    };
@@ -42,7 +38,6 @@ var Robo = ((roboEnemy) => {
 		this.attack += add;
 	};  
 
-	console.log(roboEnemy.enemies);
 	roboEnemy.enemies.Marvin = new roboEnemy.enemies.Opponent("Marvin");
 
 	roboEnemy.enemies.RobotChicken = new roboEnemy.enemies.Opponent("Robot Chicken");
