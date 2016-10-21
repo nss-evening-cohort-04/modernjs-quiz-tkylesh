@@ -18,7 +18,7 @@ var Robo = ((roboEnemy) => {
 			return output;
 		};
 	
-		roboEnemy.enemies.generateEnemy = () => {
+		this.generateEnemy = () => {
 	    // get a random index from the name array
 	    console.log(this.allowedEnemies);
 	  
@@ -38,15 +38,15 @@ var Robo = ((roboEnemy) => {
 	    };
 	};
 
-roboEnemy.enemies.Marvin = new roboEnemy.enemies.Opponent("Marvin");
-
-roboEnemy.enemies.EvilShredder = new roboEnemy.enemies.Opponent("Evil Shredder");
-
-roboEnemy.enemies.RobotChicken = new roboEnemy.enemies.Opponent("Robot Chicken");
-	
-
     roboEnemy.enemies.Opponent.prototype.addAttack = function(add){
 		this.attack += add;
 	};  
+
+	console.log(roboEnemy.enemies);
+	roboEnemy.enemies.Marvin = new roboEnemy.enemies.Opponent("Marvin");
+
+	roboEnemy.enemies.RobotChicken = new roboEnemy.enemies.Opponent("Robot Chicken");
+
+	roboEnemy.enemies.EvilShredder = new roboEnemy.enemies.Opponent("Evil Shredder");
 return roboEnemy;
 })(Robo || {});
