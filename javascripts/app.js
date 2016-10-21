@@ -9,7 +9,9 @@ $(document).ready(() => {
   console.log(playerOne.weapon);
   playerOne.toString();
 
-  var playerTwo = new Robo.enemies.Opponent("bosshog");
+  // var playerTwo = new Robo.enemies.Opponent("bosshog");
+  //creates a random instance of enemey alien player
+  var playerTwo = Robo.enemies.generateEnemy();
   console.log("playerTwo name: ", playerTwo.name);
   console.log(playerTwo);
   playerTwo.addAttack(playerTwo.weapon.addDamage);
