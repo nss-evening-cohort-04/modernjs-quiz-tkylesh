@@ -16,6 +16,7 @@ $(document).ready(() => {
   console.log("playerTwo: ",playerTwo);
   console.log("playerTwo weapon: ", playerTwo.weapon);
   playerTwo.toString();
+  console.log(playerTwo.generateAttack());
 
 
  /*
