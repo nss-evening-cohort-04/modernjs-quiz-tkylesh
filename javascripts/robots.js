@@ -26,7 +26,7 @@ var Robo =((roboTypes) => {
 	roboTypes.types.Drone = function() {
 		this.species = "aerial";
 		this.speed = 7;
-		this.health = this.health(60, 90);
+		this.health = this.health(70, 100);
 		this.toString = () => {
 			let output =`${this.name} is an ${this.species} robot that has ${this.health} health and ${this.attack} attack, weilding a ${this.weapon.weaponName}.`;
 			console.log(output);
@@ -51,7 +51,7 @@ var Robo =((roboTypes) => {
 	roboTypes.types.ATV = function() {
 		this.species = "amphibious";
 		this.speed = 5;
-		this.health = this.health(80, 110);
+		this.health = this.health(90, 110);
 		this.toString = () => {
 			let output =`${this.name} is an ${this.species} robot that has ${this.health} health and ${this.attack} attack, weilding a ${this.weapon.weaponName}.`;
 			console.log(output);
