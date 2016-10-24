@@ -61,5 +61,5 @@ var Robo =((roboTypes) => {
 	};
 	roboTypes.types.ATV.prototype = new roboTypes.types.Robot();
 
-	return roboTypes;
+return roboTypes;
 })(Robo || {});

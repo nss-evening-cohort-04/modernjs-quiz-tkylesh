@@ -39,13 +39,13 @@ var Robo = ((roboEnemy) => {
 	};  
 
 	roboEnemy.enemies.Marvin = new roboEnemy.enemies.Opponent("Marvin");
-	roboEnemy.enemies.Marvin.attackText.push("Marvin shot your robot with his Laser Cannon.");
+	roboEnemy.enemies.Marvin.attackText.push(`Marvin shot your robot with his Laser Cannon.`);
 
 	roboEnemy.enemies.RobotChicken = new roboEnemy.enemies.Opponent("Robot Chicken");
-	roboEnemy.enemies.RobotChicken.attackText.push("Robot Chicken shot your robot with his Laser Cannon.");
+	roboEnemy.enemies.RobotChicken.attackText.push(`Robot Chicken shot your robot with his Laser Cannon.`);
 
 	roboEnemy.enemies.EvilShredder = new roboEnemy.enemies.Opponent("Evil Shredder");
-	roboEnemy.enemies.EvilShredder.attackText.push("Evil Shredder Chicken shot your robot with his Laser Cannon.");
+	roboEnemy.enemies.EvilShredder.attackText.push(`Evil Shredder shot your robot with his Laser Cannon.`);
 
 
 return roboEnemy;

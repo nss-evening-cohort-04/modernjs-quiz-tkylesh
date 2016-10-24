@@ -137,6 +137,30 @@ body {
   color: white;
 }
 
+/***** Colors *****/
+
+.red {
+  background-color: #BF0A30; /* Red */
+}
+
+.blue {
+  background-color: #002868; /* Blue */
+}
+
+.white {
+  color: white;
+}
+
+.gray {
+  background: darkslategray;
+}
+
+.gameOver {
+  background-color: #BF0A30; /* Red */
+  font-size: 1.5em;
+  color: white;
+}
+
 /****** Aligment/layout ******/
 .col-md-6,
 .col-md-3 {
