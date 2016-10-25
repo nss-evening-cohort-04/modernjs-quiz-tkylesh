@@ -18,14 +18,14 @@ var Robo = ((roboEnemy) => {
 			return output;
 		};
 	
-		this.generateEnemy = () => {
-	    // get a random index from the name array
-	    var random = Math.round(Math.random() * (this.allowedEnemies.length -1));
-	    //get the string at the index
-	    var randomEnemy = this.allowedEnemies[random];
-	    //compose the corresponding enemy into the player object
-	    return randomEnemy;
-	    };
+		// this.generateEnemy = () => {
+	 //    // get a random index from the name array
+	 //    var random = Math.round(Math.random() * (this.allowedEnemies.length -1));
+	 //    //get the string at the index
+	 //    var randomEnemy = this.allowedEnemies[random];
+	 //    //compose the corresponding enemy into the player object
+	 //    return randomEnemy;
+	 //    };
 
 	    this.generateAttack = () => {
 	    var random = Math.round(Math.random() * (this.attackText.length -1));
@@ -38,14 +38,14 @@ var Robo = ((roboEnemy) => {
 		this.attack += add;
 	};  
 
-	roboEnemy.enemies.Marvin = new roboEnemy.enemies.Opponent("Marvin");
-	roboEnemy.enemies.Marvin.attackText.push(`Marvin shot your robot with his Laser Cannon.`);
+	// roboEnemy.enemies.Marvin = new roboEnemy.enemies.Opponent("Marvin");
+	// roboEnemy.enemies.Marvin.attackText.push(`Marvin shot your robot with his Laser Cannon.`);
 
-	roboEnemy.enemies.RobotChicken = new roboEnemy.enemies.Opponent("Robot Chicken");
-	roboEnemy.enemies.RobotChicken.attackText.push(`Robot Chicken shot your robot with his Laser Cannon.`);
+	// roboEnemy.enemies.RobotChicken = new roboEnemy.enemies.Opponent("Robot Chicken");
+	// roboEnemy.enemies.RobotChicken.attackText.push(`Robot Chicken shot your robot with his Laser Cannon.`);
 
-	roboEnemy.enemies.EvilShredder = new roboEnemy.enemies.Opponent("Evil Shredder");
-	roboEnemy.enemies.EvilShredder.attackText.push(`Evil Shredder shot your robot with his Laser Cannon.`);
+	// roboEnemy.enemies.EvilShredder = new roboEnemy.enemies.Opponent("Evil Shredder");
+	// roboEnemy.enemies.EvilShredder.attackText.push(`Evil Shredder shot your robot with his Laser Cannon.`);
 
 
 return roboEnemy;

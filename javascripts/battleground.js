@@ -24,9 +24,9 @@ var Robo = (function(battle) {
 		$('#playerHP')[0].innerText = `${playerHealth} / ${maxHealth}`;
 	}
 
-	battle.initializeBattleground = function(currentPlayer, currentEnemy) {
+	battle.initializeBattleground = function(currentPlayer,enemyPlayer) {
 		player = currentPlayer;
-		enemy = currentEnemy;
+		enemy = enemyPlayer;
 		maxHealthPlayer = player.health;
 		maxHealthEnemy = enemy.health;
 		//output player info to dom info div.
@@ -58,10 +58,8 @@ var Robo = (function(battle) {
 	    console.log("playerOne: ",playerOne);
 	    console.log("playerOne weapon", playerOne.weapon);
 	    playerOne.toString();
-
 	    //creates a random instance of enemey alien player
-	    playerTwo = new Robo.enemies.Opponent();
-	    playerTwo = playerTwo.generateEnemy();
+	    playerTwo = new Robo.enemies.Opponent(enemyName);
 	    playerTwo.addAttack(playerTwo.weapon.addDamage);
 	    console.log("playerTwo: ",playerTwo);
 	    console.log("playerTwo weapon: ", playerTwo.weapon);

@@ -1,6 +1,6 @@
 'use strict';
 
-let playerOne, playerName, playerTwo;
+let playerOne, playerName, playerTwo, enemyName;
 
 $(document).ready(() => {
   /*test out the creation of robot and alien player*/
@@ -29,9 +29,11 @@ $(document).ready(() => {
 
     //event listener to set player name
   $("#robotBtn").click(function() {
-    playerName = $("#player-name").val(); // grabs player name once typed
+    playerName = $("#player-name").val(); // grabs player name
+    enemyName = $('#enemy-name').val();//grabs enemy name 
     /* Declare this.voterName = playerName; */
     console.log(playerName);
+    console.log(enemyName);
   });
 
 
