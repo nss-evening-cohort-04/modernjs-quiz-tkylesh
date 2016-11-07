@@ -1,8 +1,10 @@
 'use strict';
 
-let playerOne, playerName, playerTwo, enemyName;
+ let playerOne, playerName, playerTwo, enemyName;
 
-$(document).ready(() => {
+// $(document).ready(() => {
+
+
   /*test out the creation of robot and alien player*/
   // var playerOne = new Robo.types.Bipedal();
   // playerOne.name="taylor-Bot";
@@ -126,4 +128,4 @@ $(document).ready(() => {
   });
 
 
-});
+// });

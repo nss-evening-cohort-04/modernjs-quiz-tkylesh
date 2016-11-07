@@ -22,7 +22,7 @@ var Robo = (function(battle) {
 		$('#playerProgress').css("width",`${updatedHealthVal}%`);
 		let playerHealth = Math.max(player.health, 0);
 		$('#playerHP')[0].innerText = `${playerHealth} / ${maxHealth}`;
-	}
+	};
 
 	battle.initializeBattleground = function(currentPlayer,enemyPlayer) {
 		player = currentPlayer;
@@ -85,7 +85,7 @@ var Robo = (function(battle) {
 		//call to update health after attack
 		battle.updateEnemyHealth(maxHealthEnemy);
 		if (enemy.health <= 0) {
-			enemy.health === 0;
+			enemy.health = 0;
 			$('#enemyProgress').css("width",`0%`);
 			$("#attackButton").attr("disabled", true);
 			$("#attackButton").addClass('hidden');
@@ -102,14 +102,14 @@ var Robo = (function(battle) {
 					battle.updatePlayerHealth(maxHealthPlayer);
 					//check if any healths are zero and do somethin about it!
 					if (player.health <= 0) {
-						player.health === 0;
+						player.health = 0;
 						$('#playerProgress').css("width",`0%`);
 						$("#attackButton").attr("disabled", true);
 						$("#attackButton").addClass('hidden');
 						$("#rematchButton").removeClass('hidden');
 				  		$('#attackWords')[0].innerText = "You Lose!";
 				  		$('#attackWords')[0].className = "gameOver";		
-					};
+					}
 				}, 2000);
 			}
 	});
