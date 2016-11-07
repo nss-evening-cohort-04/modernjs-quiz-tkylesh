@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Robot Wars</title>
+	<link rel="stylesheet" type="text/css" href="/lib/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/styles/styles.css"/>
+</head>
+<body>
+<h1 class="text-center">Robot Wars</h1>
+ <article id="game-container">
+
+
+    <section id="player-setup" class="card card--name">
+      <div class="card__prompt">
+      <div class="">
+        <div class="field">
+         Your Name: <input type="text" autofocus="true" id="player-name" class="field__textinput">
+        </div>
+        
+        <div class="field">
+         Enemy Name: <input type="text" autofocus="true" id="enemy-name" class="field__textinput">
+        </div>
+      </div>
+
+      <div class="card__button">
+        <a class="card__link btn btn--big btn--green"
+           href="#"
+           next="card--class" id="robotBtn">
+          <span class="btn__prompt">></span>
+          <span class="btn__text">Select A Robot</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="class-select" class="card card--class">
+      <div class="card__prompt">
+        <h4>Choose Your Robot:</h4>
+      </div>
+
+      <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+            <div class="card__button">
+              <a class="class__link btn btn--big btn--blue" id="drone" href="#">
+                <span class="btn__prompt">></span>
+                <span class="btn__text">DRONE</span>
+              </a>
+            </div>
+            </div>
+            <div class="col-md-3">
+            <div class="card__button">
+              <a class="class__link btn btn--big btn--blue" id="bipedal" href="#">
+                <span class="btn__prompt">></span>
+                <span class="btn__text">BIPEDAL</span>
+              </a>
+            </div>
+            </div>
+
+            <div class="col-md-3">
+            <div class="card__button">
+              <a class="class__link btn btn--big btn--blue" id="atv" href="#">
+                <span class="btn__prompt">></span>
+                <span class="btn__text">ATV</span>
+              </a>
+            </div>
+            </div> 
+        </div>
+      </div>
+
+      <div class="card__button">
+        <a class="card__link btn btn--big btn--green"
+           href="#"
+           next="card--weapon" id="weaponBtn">
+          <span class="btn__prompt">></span>
+          <span class="btn__text">Select weapon</span>
+        </a>
+      </div>
+      <div class="centerThis">
+          <a class="card__back btn btn--small"
+             href="#"
+             previous="card--name">
+            <span class="btn__prompt">&lt;</span>
+            <span class="btn__text">Back</span>
+          </a>
+        </div>
+    </section>
+
+    <section id="weapon-select" class="card card--weapon">
+      <div class="card__prompt">
+        <h4>Select Your Weapon:</h4>
+      </div>
+
+            <div class="card__button col-md-4">
+              <a class="class__link btn btn--big btn--dkyellow" href="#" id="lightmachinegun">
+                <span class="btn__prompt">></span>
+                <span class="btn__text">Light Machine Gun</span>
+              </a>
+            </div>
+
+            <div class="card__button col-md-4">
+              <a class="class__link btn btn--big btn--dkyellow" href="#" id="flamethrower">
+                <span class="btn__prompt">></span>
+                <span class="btn__text">Flame Thrower</span>
+              </a>
+            </div>
+
+            <div class="card__button col-md-4">
+              <a class="class__link btn btn--big btn--dkyellow" href="#" id="heavyturret">
+                <span class="btn__prompt">></span>
+                <span class="btn__text">Heavy Turret</span>
+              </a>
+            </div>
+
+      <div class="card__button">
+        <a class="card__link btn btn--big btn--green"
+           href="#"
+           next="card--battleground" id="fightBtn">
+          <span class="btn__prompt">></span>
+          <span class="btn__text">JOIN THE FIGHT!</span>
+        </a>
+      </div>
+      <div class="centerThis">
+          <a class="card__back btn btn--small"
+             href="#"
+             previous="card--class">
+            <span class="btn__prompt">&lt;</span>
+            <span class="btn__text">Back</span>
+          </a>
+        </div>
+    </section>
+
+    <section id="battleground" class="card card--battleground">
+      <div class="card__prompt">
+      </div>
+      <center>
+      <div class="row bgMain">
+          <div class="col-md-offset-4 col-md-4 centerThis muddyWords">
+            <p  id="attackWords"></p>
+          </div>
+        </div>
+      </div>
+      </center>
+      <div class="row bgStats">
+        <div class="col-md-4 centerThis" id="player-stats">
+          <!-- <div>Player Name Here (dynamically)</div>
+          <div>attack value Here(dynamically)</div>
+          <div>Health Value Here (dynamically)</div> -->
+        </div>
+        <div class="col-md-4 centerThis bottomButtons" id="action-buttons">
+          <div class="col-md-4">
+            
+          </div>
+          <div class="col-md-4">
+            <button type="" id="attackButton" class="btnDebate red white">FIGHT</button>
+            <button type="" id="rematchButton" class="btnNewGame blue white hidden" onClick="window.location.reload()">PLAY AGAIN</button>
+          </div>
+          <div class="col-md-4">
+          </div>
+        </div>
+        <div class="col-md-4 centerThis" id="enemy-stats">
+          <!-- <div>Opponent Name Here (dynamically)</div>
+          <div>Attack value Here(dynamically)</div>
+          <div>>Health Value Here (dynamically)</div> -->
+        </div>
+      </div>
+      <div class="footer centerThis">
+      </div>
+    </section>
+  </article>
+<script type="text/javascript" src="/lib/bower_components/jQuery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="/lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/javascripts/weapons.js"></script>
+<script type="text/javascript" src="/javascripts/robots.js"></script>
+<script type="text/javascript" src="/javascripts/enemies.js"></script>
+<script type="text/javascript" src="/javascripts/battleground.js"></script>
+<script type="text/javascript" src="javascripts/app.js"></script>
+</body>
+</html>
