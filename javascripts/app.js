@@ -22,8 +22,6 @@
   // console.log("playerTwo weapon: ", playerTwo.weapon);
   // playerTwo.toString();
   // console.log(playerTwo.generateAttack());
-  
-
  /*
     Show the initial view that accepts player name
    */
