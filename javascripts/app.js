@@ -1,6 +1,7 @@
 'use strict';
 
- let playerOne, playerName, playerTwo, enemyName;
+ let playerOne, playerName, playerTwo, enemyName, maxHealthPlayer, maxHealthEnemy;
+
 
 // $(document).ready(() => {
 
@@ -88,6 +89,71 @@
     $("#flamethrower").removeClass('selected');
     $("#lightmachinegun").removeClass('selected');
     playerOne.weapon = new Robo.weaponOptions.heavyTurret();
+  });
+
+
+    $("#fightBtn").click(function() {
+      playerOne.addAttack(playerOne.weapon.addDamage);
+      console.log("playerOne: ",playerOne);
+      console.log("playerOne weapon", playerOne.weapon);
+      playerOne.toString();
+      //creates a random instance of enemey alien player
+      playerTwo = new Robo.enemies.Opponent(enemyName);
+      playerTwo.addAttack(playerTwo.weapon.addDamage);
+      console.log("playerTwo: ",playerTwo);
+      console.log("playerTwo weapon: ", playerTwo.weapon);
+      playerTwo.toString();
+
+      //Initialize the battleground
+      Robo.initializeBattleground(playerOne, playerTwo);
+      maxHealthPlayer = playerOne.health;
+      maxHealthEnemy = playerTwo.health;
+    });
+
+    //this is a click function for the battle
+  $("#attackButton").on("click", function(){
+    console.log("attackwords", $('#attackWords'));
+    $('#attackWords')[0].innerText = "";
+    console.log("player at line 115 of app.js:", playerOne);
+    let playerAttackMath = Math.floor(Math.random() * (playerOne.attack - 10))+10;
+    let enemyAttackMath = Math.floor(Math.random()* (playerTwo.attack - 10))+10;
+    // console.log("player hp", player.health);
+    // console.log("player attack", playerAttackMath);
+    // console.log("enemy hp", enemy.health);
+    // console.log("enemy attack", enemyAttackMath);
+    playerTwo.health -= playerAttackMath;
+    console.log("player attack", playerAttackMath);
+    console.log("enemy hp", playerTwo.health);
+    //call to update health after attack
+    Robo.updateEnemyHealth(maxHealthEnemy);
+    if (playerTwo.health <= 0) {
+      playerTwo.health = 0;
+      $('#enemyProgress').css("width",`0%`);
+      $("#attackButton").attr("disabled", true);
+      $("#attackButton").addClass('hidden');
+      $("#rematchButton").removeClass('hidden');
+        $('#attackWords')[0].innerText = "You Win!";
+        $('#attackWords')[0].className = "gameOver";
+    }else {
+        //Enemy attack after 2 seconds
+        setTimeout(function(){
+          $('#attackWords')[0].innerText = playerTwo.generateAttack();
+          playerOne.health -= enemyAttackMath;
+          console.log("enemy attack", enemyAttackMath);
+          console.log("player hp", playerOne.health);
+          Robo.updatePlayerHealth(maxHealthPlayer);
+          //check if any healths are zero and do somethin about it!
+          if (playerOne.health <= 0) {
+           playerOne.health = 0;
+            $('#playerProgress').css("width",`0%`);
+            $("#attackButton").attr("disabled", true);
+            $("#attackButton").addClass('hidden');
+            $("#rematchButton").removeClass('hidden');
+              $('#attackWords')[0].innerText = "You Lose!";
+              $('#attackWords')[0].className = "gameOver";    
+          }
+        }, 2000);
+      }
   });
 
 /*
